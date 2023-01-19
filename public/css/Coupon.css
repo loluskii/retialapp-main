@@ -1,0 +1,1660 @@
+.divCoupon {
+    margin: 0 0 0 0;
+    z-index: 1;
+    width: 216px;
+    border-radius: 6px 6px 0 0;
+}
+.divCouponHome {
+    margin: 0 0 0 0;
+    width: 216px;
+    border-radius: 6px 6px 0 0;
+}
+/*HEADER COUPON*/
+.divCoupon .Top, .divCouponHome .Top{
+    padding:0 0 0 10px;
+    height:29px;
+    width:206px;
+    background-color:#333333;
+    position:relative;
+    color:#FFFFFF;
+}
+.divCoupon .Top H3, .divCouponHome .Top H3{
+    margin:0;
+    padding:2px;
+    line-height:26px;
+    font-weight:bold;
+    color:#FFFFFF;
+    font-size:12px;
+    position:absolute;
+    text-transform:capitalize;
+}
+.divCoupon .Top SPAN, .divCouponHome .Top SPAN {
+    position: absolute;
+    color: #FFFFFF;
+    right:7px;
+    top:0;
+    white-space: nowrap;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 2px;
+    padding-right:23px;
+    line-height: 26px;
+}
+.divCoupon .Top .lnkBlocca{
+    position:absolute;
+    right:12px;
+    top:4px;
+    width:19px;
+    height:19px;
+    display:block;
+    background-image:url(../img/coupon_bloccato.png);
+    background-position:center center;
+    background-repeat:no-repeat;
+}
+.divCoupon .Top .lnkSblocca{
+    position:absolute;
+    right:12px;
+    top:4px;
+    width:19px;
+    height:19px;
+    display:block;
+    background-image:url(../img/coupon_sbloccato.png);
+    background-position:center center;
+    background-repeat:no-repeat;
+}
+.divCoupon .Btm, .divCouponHome .Btm{
+    height:10px;
+    background-color:#ffffff;
+    width:216px;
+}
+.divCoupon .Top .lnkMainSettings, .divCouponHome .Top .lnkMainSettings {
+    display: block;
+    border-bottom-left-radius:3px;
+    position: absolute;
+    height: 21px;
+    width: 21px;
+    top: 3px;
+    right: 4px;
+    background-color:#2a2e37;
+    cursor: pointer;
+    border-radius:3px;
+    background-image:url(../img/icons/coupon_settings.png);
+    background-repeat:no-repeat;
+    background-position:center;
+}
+.divCoupon .Top .lnkMainSettings:hover, .divCouponHome .Top .lnkMainSettings:hover {
+    background-color: #111;
+}
+.divCoupon .Cnt .couponempty .lnkMainSettings, .divCouponHome .Cnt .couponempty .lnkMainSettings {
+    display: none;
+}
+/*CONTENT*/
+.divCoupon .Cnt, .divCouponHome .Cnt{
+    margin:0;
+    border:0;
+    font-size:12px;
+    padding-bottom:1px;
+    padding:0;
+    background-color:#ffffff;
+    width:216px;
+}
+.CouponMainEmpty{
+    padding:2px 19px 2px 15px;
+    color:#000000;
+}
+/*COUPON IN ATTESA LIVE*/
+.cpnDivAttesa{
+    padding:0 14px 0 13px;
+}
+/*COUPON IN COMPILAZIONE*/
+.CouponMainIns, .CouponMainConf{
+    padding:0;
+}
+.couponempty{
+    padding:10px;
+    color:#000000;
+    font-size:12px;
+}
+/*scommessa inserimento/conferma*/
+.CouponMainIns .CItems, .CouponMainConf .CItems {
+    position: relative;
+}
+.CouponMainIns .CItem, .CouponMainConf .CItem {
+    position: relative;
+    color: #42464c;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: #fff;
+    border-bottom: 1px solid #dce1e3;
+}
+.CouponMainIns .CItem.zoom, .CouponMainConf .CItem.zoom {
+    border-bottom: 1px solid #2da050;
+    background-color: rgba(45,160,80,.075);
+}
+.CouponMainIns .CItem.zoom:before, .CouponMainConf .CItem.zoom:before {
+    content: 'ZOOM';
+    position: absolute;
+    bottom: 9px;
+    left: -21px;
+    z-index: 10;
+    transform: rotate(-90deg);
+    font-size: 10px;
+    padding: 0 3px;
+    text-transform: uppercase;
+    line-height: 12px;
+    letter-spacing: -1px;
+    font-weight: normal;
+    background-color: #2da050;
+    color: #fff;
+    border-radius: 4px 4px 0 0;
+}
+.zoom.message {
+    position: relative;
+    padding: 5px 0 5px 27px;
+    font-size: 11px;
+    line-height: 1.25em;
+    color: #000;
+}
+.zoom.message:before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 17px;
+    height: 17px;
+    background: url(Images/zoomlogo.png) left top no-repeat;
+    background-size: contain;
+}
+.CItem .CInfo {
+    display: none;
+}
+.CItem .COdds {
+    position: relative;
+}
+.CItem .Cerror {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    right: 65px;
+    bottom: 2px;
+    background-image: url(../img/Error_small.png);
+    background-repeat: no-repeat;
+}
+.CItem .CCodPub {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 34px;
+    line-height: 16px;
+    font-size: 11px;
+    font-weight: bold;
+    color: #42464c;
+    text-align: right;
+}
+.CouponMainIns .CItem.te1 .CEvento, .CouponMainConf .CItem.te1 .CEvento, .CouponMainIns .CItem.te10 .CSubEv, .CouponMainConf .CItem.te10 .CSubEv {
+    display: none;
+    position: absolute;
+    top: -22px;
+    right: 2px;
+    z-index: 10;
+    width: auto;
+    padding: 0 5px;
+    background-color: #4a4f5a;
+    color: #fff;
+    font-size: 11px;
+    height: 23px;
+    line-height: 23px;
+    min-width: 32px;
+    text-align: center;
+    border-radius: 3px;
+    box-shadow: 0 0 3px #fff;
+    white-space: nowrap;
+}
+.CouponMainIns .CItem.te1 .CEvento:after, .CouponMainConf .CItem.te1 .CEvento:after, .CouponMainIns .CItem.te10 .CSubEv:after, .CouponMainConf .CItem.te10 .CSubEv:after {
+    content: '';
+    position: absolute;
+    right: 23px;
+    bottom: -5px;
+    border-top: 5px solid #4a4f5a;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+}
+.CouponMainIns .CItem.te1:hover .CEvento, .CouponMainConf .CItem.te1:hover .CEvento, .CouponMainIns .CItem.te10:hover .CSubEv, .CouponMainConf .CItem.te10:hover .CSubEv {
+    display: block;
+}
+.CItem .CFissa {
+    position: absolute;
+    right: 3px;
+    top: -16px;
+    z-index: 1;
+    height: 16px;
+    width: 13px;
+}
+.CouponMainIns .CItem.te1 .CSubEv, .CouponMainConf .CItem.te1 .CSubEv, .CouponMainIns .CItem.te10 .CEvento, .CouponMainConf .CItem.te10 .CEvento {
+    position: relative;
+    z-index: 1;
+    height: 16px;
+    line-height: 16px;
+    padding: 0;
+    padding-left: 39px;
+    font-size: 11px;
+    font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.CouponMainIns .CItem.te1 .CSubEv > span, .CouponMainConf .CItem.te1 .CSubEv > span, .CouponMainIns .CItem.te10 .CEvento, .CouponMainConf .CItem.te10 .CEvento {
+    display: block;
+    width: 160px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.CouponMainIns .CItem.te1 .CEvento > span, .CouponMainConf .CItem.te1 .CEvento > span, .CouponMainIns .CItem.te10 .CSubEv > span, .CouponMainConf .CItem.te10 .CSubEv > span {
+    width: auto;
+}
+.CItem .CSegno {
+    font-size: 11px;
+    line-height: 15px;
+    font-weight: bold;
+    color: #42464c;
+    padding-left: 39px;
+    width: 122px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.CItem .CSegno .CqSegno {
+    margin: 0 0 0 0;
+    font-weight: normal;
+    font-size: 11px;
+    opacity: 0.8;
+}
+.CItem .CSegno .ClblSegno {
+    display: none;
+}
+.CItem .CSegno span {
+    padding-right: 5px;
+}
+.CItem .CDelete {
+    position: absolute;
+    right: 3px;
+    top: -1px;
+    width: 13px;
+    height: 14px;
+    display: block;
+    background-image: url(../img/btn_cancella_rosso.gif);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.CItem .CFissa .lnkFissaOff, .CItem .CFissa .lnkFissaOn {
+    display: block;
+    height: 16px;
+    width: 13px;
+    background-image: url(../img/icons/Banker.gif);
+    background-position: left center;
+    background-repeat: no-repeat;
+}
+.CItem .CFissa .lnkFissaOff {
+    background-image: url(../img/icons/NoBanker.gif);
+}
+.CItem.te10 {
+    border-color: #ab1618;
+}
+.CItem.te10:before {
+    content: "";
+    position: absolute;
+    left: -11px;
+    top: 0;
+    bottom: -1px;
+    z-index: 1000;
+    width: 12px;
+    border-radius: 6px 0 0 6px;
+    background-color: #ab1618;
+    box-shadow: -1px 0px 2px #000;
+}
+.CItem.te10:after {
+    content: "Live";
+    position: absolute;
+    left: -19px;
+    top: 11px;
+    z-index: 1001;
+    width: 29px;
+    height: 10px;
+    line-height: 10px;
+    text-align: center;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+.CouponMainIns .CItem.te10 .CEvento, .CouponMainConf .CItem.te10 .CEvento {
+    position: relative;
+    z-index: 2;
+}
+.CItem .valQuota, .CItem .valQuota_0, .CItem .valQuota_1, .CItem .valQuota_2, .CItem .valQuota_3, .CItem .valQuota_4, .CItem .valQuota_5, .CItem .valQuota_10 {
+    text-align: right;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 15px;
+    position: absolute;
+    right: 20px;
+    top: 0;
+    color:#157d54 
+}
+.valQuota_0 {
+    color: #ffa000;
+}
+.valQuota_1 {
+    color: #000;
+}
+.valQuota_2 {
+    color: #ff6919;
+}
+.valQuota_3 {
+    color: #1d861d;
+}
+.valQuota_4 {
+    color: #2574ab;
+}
+.valQuota_5 {
+    color: #bf0000;
+}
+.valQuota_10 {
+    color: #b131a0;
+}
+/*sottoevento disabilitato in piazzamento*/
+.CItem .COdds.E_RimuoviSottoeventiDisPiazzamento {
+    background-color: #ab1618;
+    background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,.25) 10px, rgba(255,255,255,.25) 20px);
+    box-shadow: inset 0 0 0 2px #fff;
+}
+.CItem .COdds.E_RimuoviSottoeventiDisPiazzamento .valQuota, .CItem .COdds.E_RimuoviSottoeventiDisPiazzamento .valQuota_0, .CItem .COdds.E_RimuoviSottoeventiDisPiazzamento .valQuota_1, .CItem .COdds.E_RimuoviSottoeventiDisPiazzamento .valQuota_2, .CItem .COdds.E_RimuoviSottoeventiDisPiazzamento .valQuota_3, .CItem .COdds.E_RimuoviSottoeventiDisPiazzamento .valQuota_4, .CItem .COdds.E_RimuoviSottoeventiDisPiazzamento .valQuota_5, .CItem .COdds.E_RimuoviSottoeventiDisPiazzamento .valQuota_10, .CItem .COdds.E_RimuoviSottoeventiDisPiazzamento .Cerror {
+    display: none;
+}
+.CItem .COdds.E_RimuoviSottoeventiDisPiazzamento .CSegno {
+    color: #fff;
+}
+/*items in Conferma*/
+.CouponMainConf .CpnTipoRiep.HighImp{
+    border-top:3px solid #31a554;
+}
+/*items in errore "True"*/
+.CouponMainIns .COdds.True .Cerror {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    left:3px;
+    bottom:2px;
+    background-image: url(../img/Error_small.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+/*dati utente*/
+.CouponUserData {
+    margin: 0;
+    padding: 0 5px 5px 5px;
+    position: relative;
+    text-align: center;
+    color: #FFFFFF;
+    border-radius:3px 3px 0 0;
+    border-bottom:1px solid #5cbc79;
+    background: #31a554;
+   /* Old browsers */
+    background: -moz-linear-gradient(top, #31a554 0%, #289549 100%);
+   /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#31a554), color-stop(100%,#289549));
+   /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #31a554 0%,#289549 100%);
+   /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #31a554 0%,#289549 100%);
+   /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #31a554 0%,#289549 100%);
+   /* IE10+ */
+    background: linear-gradient(to bottom, #31a554 0%,#289549 100%);
+   /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#31a554', endColorstr='#289549',GradientType=0 );
+   /* IE6-9 */
+}
+.CouponUserDataHdr {
+    height: 15px;
+    font-size: 12px;
+    font-weight: bold;
+    border-bottom: 2px solid #fff;
+    margin: 0;
+    line-height: 15px;
+    color: #fff;
+    text-align: center;
+}
+.CouponUserData .Saldo {
+    background-color: #3f444e;
+    text-align: center;
+    margin: 3px 0;
+}
+.dropdown.CpnUser {
+    width: 135px;
+}
+/*riepilogo importi tipiscommessa*/
+.divCoupon .TextBox, .divCouponHome .TextBox {
+    height: 16px;
+    line-height: 16px;
+    padding: 0 3px;
+    border: 1px solid #ddd;
+    -webkit-box-shadow: inset 0 1px 5px 0 #ddd;
+    box-shadow: inset 0 1px 5px 0 #ddd;
+}
+.CouponMainIns .divCpnTipi {
+    position: relative;
+}
+.CouponMainConf .divCpnTipi {
+    font-size: 12px;
+    color: #42464C;
+    background-color: #fff;
+}
+.CouponMainIns .divCpnTipi .divCpnTipo {
+    padding: 0;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0;
+    height: 27px;
+    line-height: 26px;
+    text-transform: uppercase;
+    color: #ffffff;
+    width: 105px;
+    text-align: center;
+    overflow: hidden;
+}
+.CouponMainIns .divCpnTipi .divCpnTipo.Mul {
+    cursor: pointer;
+    background: #3f444e;
+    border-top: 2px solid #3f444e;
+    border-left: 2px solid #3f444e;
+    border-right: 2px solid #3f444e;
+    height: 24px;
+    border-bottom: 3px solid #289549;
+}
+.CouponMainIns .divCpnTipi .divCpnTipo.Sis {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    background: #3f444e;
+    height: 24px;
+    border-top: 2px solid #3f444e;
+    border-right: 2px solid #3f444e;
+    border-bottom: 3px solid #289549;
+}
+.CouponMainIns .divCpnTipi .divCpnTipo.DI {
+    width: 100%;
+}
+.CpnPulsBonus A, .CouponMainIns .divCpnTipi .sel .divCpnTipo {
+    cursor:pointer;
+    background: #31a554;
+   /* Old browsers */
+    background: -moz-linear-gradient(top, #31a554 0%, #289549 100%);
+   /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#31a554), color-stop(100%,#289549));
+   /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #31a554 0%,#289549 100%);
+   /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #31a554 0%,#289549 100%);
+   /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #31a554 0%,#289549 100%);
+   /* IE10+ */
+    background: linear-gradient(to bottom, #31a554 0%,#289549 100%);
+   /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#31a554', endColorstr='#289549',GradientType=0 );
+   /* IE6-9 */
+}
+.CouponMainIns .divCpnTipi .divCpnTipo a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+}
+.CouponMainIns .divCpnTipi .sel .divCpnTipo a {
+    color: #ffffff;
+    text-decoration: none;
+}
+.CouponMainIns .divCpnTipi .sel.singola .divCpnTipo {
+   display:none;
+}
+.CouponMainIns .divCpnTipi .sel.singola .CpnTipoRiep.todds{
+   display:none;
+}
+.CouponMainIns .divCpnTipi .CpnTipoRiep.todds{
+    background-color:#3f444e;
+    color:#fff;
+    border:0;
+}
+.CouponMainIns .divCpnTipo img {
+    display: none;
+}
+.CouponMainIns .divCpnTipoCnt {
+    font-size: 12px;
+    margin: 0;
+    color: #42464c;
+    background-color: #fff;
+    padding: 0;
+   /*float: left;
+   */
+}
+.CpnTipoRiep, .CpnTipoRiepRagg {
+    height: 20px;
+    line-height: 20px;
+    border-bottom: 1px solid #dce1e3;
+    position: relative;
+    clear: both;
+   padding:0 10px;
+}
+.CpnTipoRiepRagg {
+    height: 23px;
+    line-height: 24px;
+    margin:0;
+}
+.CpnTipoRiep.stake{
+   background-color:#31a554;
+    color:#FFF;
+    height:auto;
+    min-height: 27px;
+    line-height:27px;
+    border-bottom: none
+}
+.CpnTipoRiep.CpnCut1 {
+   border-bottom: none
+}
+.CpnTipoRiep .RiepSX, .CpnTipoRiepRagg .RiepSX {
+    float: left;
+    font-weight: normal;
+}
+.CpnTipoRiep .RiepDX, .CpnTipoRiepRagg .RiepDX {
+    float: right;
+    text-align: right;
+    margin: 0px;
+    font-size: 12px;
+}
+.CpnTipoRiep .lnkRefresh {
+    padding-left: 10px;
+    padding-top: 5px;
+    float: left;
+    background-image: url(../img/icons/Refresh_cpn_ico.png);
+    width: 15px;
+    height: 15px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.CpnTipoRiepRagg .RiepSX A {
+    cursor: pointer;
+    background-image: url(../img/coupon_selezionaTutti.gif);
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 15px;
+    display: block;
+}
+.CpnTipoRiepDbl {
+    height: 35px;
+    position: relative;
+    clear: both;
+    border-bottom:1px solid #DCE1E3;
+}
+.CpnTipoRiepDbl .RiepSX {
+    float: left;
+    font-weight: normal;
+    line-height: 35px;
+    margin-left: 10px;
+}
+.CpnTipoRiepDbl .RiepDX {
+    float: right;
+    text-align: right;
+    line-height: 17px;
+    margin-right: 10px;
+}
+.CpnTipoRiepDbl .lnkRefresh {
+    padding-left: 10px;
+    float: left;
+    background-image: url(../img/icons/Refresh_cpn_ico.png);
+    width: 20px;
+    height: 35px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.CpnTipoRiep.High, .CpnTipoRiepDbl.High {
+    font-weight: bold;
+}
+.CpnTipoRiep.HighImp, .CpnTipoRiepDbl.HighImp {
+    font-weight: bold;
+}
+.CpnCut1Details {
+    height: 60px;
+    line-height: 15px;
+    margin-top: 10px;
+}
+.CpnTipoBonus {
+    display: none;
+}
+.CpnTipoBonus .RiepSX {
+    display: none;
+}
+/*Importo Scommessa Sistema*/
+.CpnTipoSisRiep, .CpnTipoSisRiepHdr {
+    position:relative;
+    border-bottom:1px solid #22314e;
+    height:51px;
+    margin-top:3px;
+    border-bottom:1px solid #ccc
+}
+.CpnTipoSisRiepHdr {
+    height:25px;
+    font-size:12px;
+    font-weight:bold;
+    background-color: #264d22;
+    margin:0;
+    color:#fff;
+    border-bottom:1px solid #fff
+}
+.CpnTipoSisRiep .TSChk {
+    display:block;
+   position:absolute;
+    left:8px;
+    top:5px;
+    height:20px;
+    line-height:20px;
+    width:20px;
+}
+.CpnTipoSisRiep .TSHid {
+    display:block;
+    display:none;
+}
+.CpnTipoSisRiep .TSTipo {
+    display:block;
+   position:absolute;
+    left:28px;
+    top:5px;
+    height:20px;
+    line-height:20px;
+    width:100px;
+}
+.CpnTipoSisRiep .TSNComb {
+    display:block;
+   position:absolute;
+    left:108px;
+    top:5px;
+    height:20px;
+    line-height:20px;
+    width:30px;
+}
+.CpnTipoSisRiep .TSTxt {
+    display:block;
+   position:absolute;
+    right:10px;
+    top:0;
+}
+.CpnTipoSisRiep .TSVinLbl {
+    display:block;
+   position:absolute;
+   left:10px;
+    top:30px;
+    height:20px;
+    line-height:20px;
+    white-space:nowrap;
+}
+.CpnTipoSisRiep .TSVin {
+    display:block;
+   position:absolute;
+   right:10px;
+    top:30px;
+    height:20px;
+   line-height:20px;
+    background-color:#fff;
+    padding-left:3px;
+}
+.CpnTipoSisRiepHdr .TSTipo {
+    display:block;
+   position:absolute;
+    left:10px;
+    top:0;
+    height:20px;
+    line-height:24px;
+    width:50px;
+}
+.CpnTipoSisRiepHdr .TSNComb {
+    display:block;
+   position:absolute;
+    left:70px;
+    top:0;
+    height:20px;
+    line-height:24px;
+    width:30px;
+}
+.CpnTipoSisRiepHdr .TSTxt {
+    display:block;
+   position:absolute;
+    right:10px;
+    top:0;
+    height:20px;
+    line-height:24px;
+}
+.CpnTipoSisRiep.dis {
+    display: none;
+}
+/*Pulsanti*/
+.CpnPuls{
+    height:21px;
+    clear:both;
+    padding:3px
+}
+.CpnPuls .btnCoupon.sx{
+   float: left;
+    background-color: #333;
+    box-shadow: 0px 15px 20px -5px #999inset;
+    color: #fff;
+}
+.CpnPuls .btnCoupon.dx{
+   float:right;
+    border-top:1px solid #81d970;
+    cursor:pointer;
+    background: #2c8017;
+   /* Old browsers */
+    background: -moz-linear-gradient(top, #2c8017 26%, #19450c 100%);
+   /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(26%,#2c8017), color-stop(100%,#19450c));
+   /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #2c8017 26%,#19450c 100%);
+   /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #2c8017 26%,#19450c 100%);
+   /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #2c8017 26%,#19450c 100%);
+   /* IE10+ */
+    background: linear-gradient(to bottom, #2c8017 26%,#19450c 100%);
+   /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2c8017', endColorstr='#19450c',GradientType=0 );
+   /* IE6-9 */
+    color:#fff 
+}
+.CpnPuls .btnCoupon{
+    display:block;
+    width:65px;
+    line-height:20px;
+    text-decoration:none;
+    color:#264d22;
+    text-align:center;
+    font-weight:bold;
+}
+.CpnPuls:hover{
+    color:#264d22;
+}
+.btnCoupon:hover{
+    color:#264d22;
+}
+/*RICARICA COUPON*/
+.divCpnTipoRic {
+    padding: 5px;
+    font-size:12px;
+    font-weight:bold;
+    margin:0;
+    height:16px;
+    line-height:16px;
+    text-transform:uppercase;
+    color:#000;
+    background-color:#ffffff;
+    overflow:hidden;
+}
+.divCpnTipoRicCnt{
+    padding:0 5px 3px 5px;
+}
+.divCpnTipoRicCnt .ScommRisTRAItem, .divCpnTipoRicCnt .ScommRisTRItem{
+   height:18px;
+    border-bottom:1px solid #ccc
+}
+.divCpnTipoRicCnt a{
+    text-decoration:none;
+    display:block;
+   line-height:18px;
+    font-weight:bold;
+    color:#000;
+}
+.divCpnTipoRicCnt a.sx{
+    float:left;
+}
+.divCpnTipoRicCnt a.dx{
+    float:right;
+}
+/*COUPON ACCETTATO*/
+.CouponMainAccepted{
+    background-repeat: repeat-y;
+    margin: 0;
+    font-size:12px;
+    margin:1px 0 0 0;
+    color:#000;
+    background-color:#d2f1c5;
+    padding:5px;
+}
+.CouponMainAccepted INPUT{
+    margin:2px auto 0 auto;
+    display:block;
+}
+.CouponMainAccepted IMG{
+    float:left;
+}
+.divCouponError, .divCouponErrorGen{
+    position:relative;
+    border:1px solid #b60000;
+    background-color:#5c0f00;
+    margin:0 3px 3px 3px;
+    color:#FFFFFF;
+    font-weight:bold;
+    font-size:11px;
+    background-repeat:no-repeat;
+    background-position:5px center;
+    padding:10px 5px 10px 42px;
+}
+.divCouponErrorGen{
+    margin:0 10px 3px 9px;
+}
+.CouponUserData .cboUtenti {
+    height:20px;
+}
+.CouponUserData .cboUtenti .txtUtente{
+   float:left;
+   height:20px;
+   position:relative;
+}
+.CouponUserData .cboUtenti .txtUtente INPUT{
+   position:absolute;
+   top:0;
+    left:0;
+    height:16px !important;
+    border:0
+}
+.CouponUserData .cboUtenti .cboUtente{
+   float:right;
+    width:135px;
+    overflow:hidden;
+    position:relative;
+    height:20px;
+}
+.CouponUserData .dropdown.Expanded{
+    width:auto;
+}
+.CouponUserData .dropdown{
+    width:135px;
+    position:absolute;
+   left:0;
+    top:0;
+    height:18px;
+    border:0
+}
+/**/
+.divScommRis{
+    margin: 0 0 0 0;
+    font-size: 11px;
+}
+.divScommRis A img{
+    width: 20px;
+}
+.divScommRis A, .divScommRic A{
+    text-decoration:none;
+    color:#000000;
+    font-weight:bold;
+}
+.ScommRisTRItem{
+    height:18px;
+    background-color:#fff
+}
+.ScommRisTRAItem{
+    height:18px;
+    background-color:#fff
+}
+.ScommRisTRItem TD, .ScommRisTRAItem TD{
+    border-bottom:1px solid #ccc;
+}
+.ScoRisParzialeA .tdParziale{
+    background-color:#dadada;
+    padding:5px;
+    border:1px solid #a3a2a2;
+    color:#000000;
+}
+.ScoRisParziale .tdParziale{
+    background-color:#dadada;
+    padding:5px;
+    border:1px solid #a3a2a2;
+    color:#000000;
+}
+.divScommRis .Accettato{
+   color:#000000;
+    font-weight:bold;
+    height:25px;
+}
+.cancCoupon{
+    float:right;
+    margin:1px 7px 0 0;
+}
+.stampaCoupon a:link{
+    float:left;
+    text-decoration:none;
+    color:#000000;
+}
+.stampaCoupon a:visited{
+    float:left;
+    text-decoration:none;
+    color:#000000;
+}
+.stampaCoupon a:hover{
+    float:left;
+    text-decoration:none;
+    color:#666666;
+}
+.btnRosso{
+    float:right;
+    padding-top:1px;
+}
+.divMainCPreJC{
+    width:207px;
+    margin:0 auto;
+    overflow:hidden;
+    position:relative;
+}
+.divInfoCPre{
+    background-image:url(../img/couponPre_info_bg.gif);
+    background-position:center top;
+    background-repeat:no-repeat;
+    padding:5px;
+    font-size:11px;
+    color:#000000;
+}
+/******* COUPON PRECOMPILATI******/
+.CPreItem{
+    background-image:url(../img/couponPre_item_bg.gif);
+    position:relative;
+    height:55px;
+    margin-bottom:4px;
+}
+.CPreSubEv{
+   width:202px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    line-height:18px;
+    padding-left:5px;
+    font-size:11px;
+    color:#465e8c;
+}
+.CPreEv{
+   width:202px;
+    padding-left:5px;
+    font-weight:bold;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    height:14px;
+    line-height:14px;
+    font-size:11px;
+    color:#22314e;
+}
+.CPreSegno{
+    position:absolute;
+    bottom:3px;
+    left:5px;
+    font-weight:bold;
+   color:#22314e;
+}
+.CPreQuota{
+    position:absolute;
+    bottom:3px;
+    right:10px;
+   font-weight:bold;
+   color:#22314e;
+}
+.CPreRiep{
+    width:207px;
+    padding-left:2px;
+    position:relative;
+   height:27px;
+    line-height:27px;
+    border-bottom:1px solid #d0d3da;
+    font-size:11px;
+   color:#767676;
+    font-weight:bold;
+}
+.CPreRiep SPAN{
+    position:absolute;
+    display:block;
+    top:0;
+    right:2px;
+   height:27px;
+    line-height:27px;
+    color:#22314e 
+}
+.CPreRiep SPAN INPUT{
+    font-size:11px;
+    height:17px;
+    line-height:16px;
+    padding:0 3px;
+   border:1px solid #535353;
+    width:50px;
+    margin:3px 0 0 0;
+}
+.CPrePrev{
+    background-position:center;
+    background-repeat:no-repeat;
+    cursor:pointer;
+    position:absolute;
+    bottom:0px;
+    left:10px;
+   height:30px;
+    width:20px;
+    background-image:url(../img/Cpn_Pre_prev_bg.png);
+}
+.CPreNext{
+   background-position:center;
+    background-repeat:no-repeat;
+   cursor:pointer;
+    position:absolute;
+   bottom:0px;
+    right:10px;
+   height:30px;
+    width:20px;
+    background-image:url(../img/Cpn_Pre_next_bg.png);
+}
+.CPrePuls{
+    height:30px;
+    line-height:30px;
+    background-image:url(../img/Cpn_Pre_Btm_bg.png);
+    background-position:center center;
+    background-repeat:no-repeat: 
+}
+.CPrePuls A{
+    display:block;
+    background-image:url(../img/btnConferma.png);
+    background-position:center center ;
+    background-repeat:no-repeat;
+    width:121px;
+    line-height:30px;
+    text-decoration:none;
+    color:#ffffff;
+    text-align:center;
+    font-weight:bold;
+    margin:5px auto 0 auto;
+}
+.PCDisclaimerBonus{
+    clear:both;
+    border:1px solid #000000;
+    padding:2px 5px 5px 5px;
+    margin:5px 0 5px 0;
+    text-align:center;
+}
+.CpnPulsBonus A{
+    display:block;
+    color:#FFF;
+    font-weight:bold;
+    text-align:center;
+    background-color:#8e0303;
+    border:1px solid #18233a;
+    border-radius:5px;
+    height:18px;
+    line-height:18px;
+    text-decoration:none;
+    margin:6px 4px 3px 4px;
+}
+.CpnPulsBonus A:hover{
+    background-color:#db0101;
+    border:1px solid #FF0000
+}
+.divDisclaimerBonus{
+    padding:5px;
+    margin:5px 6px 0 6px;
+    background-color:#f3e6b9;
+    color:#22314e;
+    border-radius:3px;
+}
+/* Animazione Live Alternativa (HTML) */
+.divAnimazioneLiveHTML{
+   background-image: url('Images/waiting_Live.gif');
+    background-repeat: no-repeat;
+    background-position: center 10px;
+    width:170px;
+    margin:10px auto;
+    border: 3px solid #BDE7B5;
+    height: 70px;
+    position:relative;
+}
+.divAnimazioneLiveHTML span{
+    position: absolute;
+    width:170px;
+    text-align: center;
+    bottom:0px;
+    color: #23521B;
+    font-weight:bold;
+}
+/*#region Prenota coupon*/
+.divNumPrenotato {
+    background-color: #ffffff;
+    border-bottom-color: #3f444e;
+    border-bottom-style: solid;
+    color: #000000;
+}
+.divNumPrenotato .info{
+   padding:5px;
+}
+.divNumPrenotato .value{
+   padding:5px;
+    padding-top:0;
+}
+.divNumPrenotato .pnlLnk{
+   height:20px;
+    padding-top:10px;
+}
+.divNumPrenotato .TextBox {
+    box-shadow:none;
+    margin:0;
+   height:18px;
+    line-height:18px;
+   border-color:#b7b7b7;
+}
+.divNumPrenotato .lnk{
+    border-top:1px solid #62bb7d;
+    border-radius:2px;
+    background: #31a554;
+   /* Old browsers */
+    background: -moz-linear-gradient(top, #31a554 0%, #289549 100%);
+   /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#31a554), color-stop(100%,#289549));
+   /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #31a554 0%,#289549 100%);
+   /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #31a554 0%,#289549 100%);
+   /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #31a554 0%,#289549 100%);
+   /* IE10+ */
+    background: linear-gradient(to bottom, #31a554 0%,#289549 100%);
+   /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#31a554', endColorstr='#289549',GradientType=0 );
+   /* IE6-9 */
+    line-height:20px;
+    height:19px;
+    display:block;
+    text-transform:uppercase;
+    text-decoration:none;
+    color:#FFF;
+    font-size:11px;
+    font-weight:bold;
+    padding:0 5px;
+}
+.divNumPrenotato .lnk.Load{
+    float:right;
+}
+.divNumPrenotato .lnk.Cancel{
+   float:left;
+    font-size:12px;
+    border:0;
+    background-image:none;
+    background-color:transparent;
+    color:#457cc0;
+    font-weight:normal;
+    padding-left:0;
+    text-transform:none 
+}
+.divNumPrenotato .lnk.Ok{
+   float:right;
+}
+.divNumPrenotato .msg{
+    padding:10px;
+    background-color:#e5fce2;
+    border:1px solid #c1debf;
+    margin-bottom:5px;
+}
+.divNumPrenotato .msg.KO {
+    background-color:#ffdddc;
+    border:1px solid #ffb4c1;
+}
+.divNumPrenotato .msg.Partial{
+    background-color:#f2f2f2;
+    border:1px solid #dadada;
+}
+.prenSco{
+   padding:10px;
+}
+.prenSco #info{
+   width:100%;
+    float:left;
+    margin-bottom:10px;
+}
+.prenSco #info .title{
+   display:block;
+    font-weight:bold;
+}
+.prenSco #info .content{
+   display:block;
+    min-height:50px;
+}
+.prenSco #info #play{
+   width:calc(50% - 10px);
+    float:left;
+    padding-right:10px;
+    min-height:100px;
+}
+.prenSco #info #register{
+   width:calc(50% - 11px);
+    float:left;
+   padding-left:10px;
+   border-left:1px solid #d9d9d9;
+   min-height:90px;
+}
+.prenSco #info .lnk{
+    text-decoration:none;
+    color:#FFFFFF;
+    font-weight:bold;
+    font-size:12px;
+    height:28px;
+    padding:0 10px;
+    display:block;
+    float:left;
+    text-align:center;
+    line-height:27px;
+    margin:10px 10px 0 0;
+    border-top:1px solid #62bb7d;
+    cursor:pointer;
+    border-radius:2px;
+    background: #31a554;
+   /* Old browsers */
+    background: -moz-linear-gradient(top, #31a554 0%, #289549 100%);
+   /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#31a554), color-stop(100%,#289549));
+   /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #31a554 0%,#289549 100%);
+   /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #31a554 0%,#289549 100%);
+   /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #31a554 0%,#289549 100%);
+   /* IE10+ */
+    background: linear-gradient(to bottom, #31a554 0%,#289549 100%);
+   /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#31a554', endColorstr='#289549',GradientType=0 );
+   /* IE6-9 */
+}
+.prenSco #info .lnk.Register {
+    background: #c22223;
+   /* Old browsers */
+    background: -moz-linear-gradient(top, #c22223 0%, #9d1213 91%);
+   /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c22223), color-stop(91%,#9d1213));
+   /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #c22223 0%,#9d1213 91%);
+   /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #c22223 0%,#9d1213 91%);
+   /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #c22223 0%,#9d1213 91%);
+   /* IE10+ */
+    background: linear-gradient(to bottom, #c22223 0%,#9d1213 91%);
+   /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c22223', endColorstr='#9d1213',GradientType=0 );
+   /* IE6-9 */
+    border-top:1px solid #560404;
+}
+.prenSco #info .lnk.eMailFake {
+    background-color: #363c40;
+    border-top-color: #494f5b;
+    background-image: none;
+}
+.prenSco #info .sendMail{
+    float:left;
+    position:relative;
+    height:39px;
+}
+.prenSco #info .sendMail .textbox{
+   display:none;
+    height:23px;
+    float:left;
+    margin-top:10px;
+    margin-right:5px;
+    width:140px !important;
+}
+.prenSco #info .sendMail .lnk.eMail{
+   display:none;
+}
+.prenSco #info .sendMail .lnk.cancel{
+   display:none;
+    font-size:12px;
+    border:0;
+    margin-right:0;
+    background-image:none;
+    background-color:transparent;
+    color:#457cc0;
+    font-weight:normal;
+    padding-left:0;
+    text-transform:none 
+}
+.prenSco #info .sendMail .imgError{
+   position:absolute;
+    top:17px;
+    left:120px;
+    display:none;
+}
+.prenSco #info .sendMail .ValidationSummary{
+   display:none;
+}
+.prenSco #info .sendMail.active .lnk.eMailFake{
+   display:none;
+}
+.prenSco #info .sendMail.active .textbox{
+   display:block;
+}
+.prenSco #info .sendMail.active .lnk.eMail{
+   display:block;
+    font-size:0;
+    position:relative;
+    width:5px;
+}
+.prenSco #info .sendMail.active .lnk.eMail:after{
+   content:"►";
+    font-size:13px;
+    position:absolute;
+    top:0;
+    left:7px;
+}
+.prenSco #info .sendMail.active .lnk.cancel{
+   display:block;
+}
+.prenSco #info .sendMail.active .imgError{
+   display:block;
+}
+.prenSco #info .sendMail.active .ValidationSummary{
+   display:block;
+}
+.prenSco #bookHead{
+   clear:both;
+    margin:10px 0;
+    padding:5px;
+    border:1px solid #d9d9d9;
+    background-color:#f0f0f0;
+    text-align:center;
+}
+.prenSco #bookHead .number{
+    font-size:15px;
+    font-weight:bold;
+   color:#616065;
+}
+.prenSco #bookHead .number SPAN{
+   color:#31a554;
+   font-weight:bold;
+    padding-left:10px;
+}
+.prenSco #bookHead .date{
+   display:block;
+   font-size:11px;
+    line-height:18px;
+   color:#616065;
+}
+.prenSco .rep{
+    font-weight:normal;
+}
+.prenSco .rep .item{
+   height:32px;
+    line-height:32px;
+   border-bottom:1px solid #dfe1e3
+}
+.prenSco .rep .item.hdr{
+    background-color:#494f5b;
+    height:29px;
+    line-height:29px;
+    font-weight:bold;
+    color:#FFF;
+    text-align:center;
+    border:0;
+}
+.prenSco .rep .item.hdr DIV.cod {
+    height: 29px;
+    line-height: 29px;
+}
+.prenSco .rep .item DIV{
+   float:left;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+.prenSco .rep .item DIV.cod {
+   width: 7%;
+   text-align:center;
+   height:32px;
+    line-height:32px;
+}
+.prenSco .rep .item DIV.date {
+   width: 20%;
+   text-align:center;
+}
+.prenSco .rep .item DIV.event {
+   width: 43% 
+}
+.prenSco .rep .item DIV.tipo {
+   width: 15%;
+   text-align:center;
+}
+.prenSco .rep .item DIV.cq {
+   display:none;
+}
+.prenSco .rep .item DIV.tq {
+   width: 15% ;
+   text-align:center;
+}
+.prenSco #bookFooter{
+    text-align:center;
+}
+.prenSco #bookFooter .importo{
+    display:block;
+    margin:10px 0;
+    font-weight:bold;
+    font-size:14px;
+}
+.prenSco #bookFooter .barcode{
+    display:block;
+}
+.prenSco .ValidationSummary{
+   border:0;
+    padding:0;
+    margin:0;
+    position:absolute;
+    left:0;
+    top:-5px;
+}
+.prenSco .ValidationSummary ul{
+    list-style-type:none;
+    white-space:nowrap;
+    color:red;
+    margin:0;
+    padding:0;
+}
+#backgroundPrenotatoreSco {
+    display:none;
+    position:fixed;
+    _position:absolute;
+   /* hack for internet explorer 6*/
+    height:100%;
+    width:100%;
+    top:0;
+    left:0;
+    background:#000000;
+    z-index:2100;
+}
+#popupPrenotatoreSco{
+    display:none;
+    position:fixed;
+    _position:absolute;
+   /* hack for internet explorer 6*/
+    height:500px;
+    width:680px;
+    z-index:12000;
+    font-size:12px;
+    background-color:#FFF;
+    box-shadow: 0px 2px 10px #4d4d4d;
+    border-radius:0;
+    overflow:hidden;
+}
+#popupPrenotatoreSco .divTitle{
+    height: 25px;
+    position: relative;
+    font-size: 12px;
+    color: #FFFFFF;
+}
+#popupPrenotatoreSco #divBody IFRAME{
+   height:475px;
+    overflow-y:auto;
+    width:100%;
+}
+#popupPrenotatoreScoClose{
+   right: 6px;
+    top: 4px;
+    cursor:pointer;
+    position: absolute;
+    display: block;
+    background-image:url(../img/icons/close_ico.png);
+   height:15px;
+    width:15px;
+    background-repeat:no-repeat;
+}
+/*#endregion*/
+/*#region Money Back*/
+.divCodCouponMoneyBack {
+    background-color: #fff;
+    color: #000000;
+    border-bottom-color: #3f444e;
+    border-bottom-style: solid;
+}
+.divCodCouponMoneyBack .info {
+    padding: 5px;
+}
+.divCodCouponMoneyBack .value {
+    padding: 5px;
+    padding-top: 0;
+}
+.divCodCouponMoneyBack .pnlLnk {
+    height: 20px;
+    padding-top: 10px;
+}
+.divCodCouponMoneyBack .TextBox {
+    box-shadow: none;
+    margin: 0;
+    height: 18px;
+    line-height: 18px;
+    border-color: #b7b7b7;
+}
+.divCodCouponMoneyBack .lnk {
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#31a554', endColorstr='#289549',GradientType=0 );
+   /* IE6-9 */
+    line-height: 20px;
+    height: 19px;
+    display: block;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #FFF;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 0 5px;
+}
+.divCodCouponMoneyBack .lnk.Load {
+    float: right;
+    display: block;
+    height: 19px;
+    width: 25px;
+    right: 12px;
+    bottom: 10px;
+    background-image: url("../img/SendFastSport.png");
+    background-repeat: no-repeat;
+}
+.divCodCouponMoneyBack .lnk.Cancel {
+    display: block;
+    font-size: 12px;
+    border: 0;
+    background-image: none;
+    background-color: #b60000;
+    border-radius: 2px;
+    font-weight: normal;
+    padding-left: 0;
+    text-align: center;
+    margin-top: 10px;
+    height: 20px;
+    line-height: 20px;
+    text-transform: none;
+}
+.divCodCouponMoneyBack .msg {
+    padding: 10px;
+    background-color: #e5fce2;
+    border: 1px solid #c1debf;
+    margin-bottom: 5px;
+}
+.divCodCouponMoneyBack .msg.KO {
+    background-color: #ffdddc;
+    border: 1px solid #ffb4c1;
+}
+.divCodCouponMoneyBack .msg.Partial {
+    background-color: #f2f2f2;
+    border: 1px solid #dadada;
+}
+/*#endregion Money Back*/
+/*#region Anonymous FreeBets */
+.AnonymousFreeBets {
+    position: relative;
+    margin-top: 5px;
+    padding: 5px;
+    background-color: #eee;
+    border-left: 5px solid #fff;
+    border-right: 5px solid #fff;
+}
+.AnonymousFreeBets .FreeBetsTxt {
+    padding: 0 0 5px 0;
+    color: #000;
+}
+.AnonymousFreeBets .TextBox:disabled {
+   background: #dadada !important;
+    color: #777;
+}
+.AnonymousFreeBets .TextBox:disabled:autofill {
+   background: #dadada !important;
+    color: #777;
+}
+.AnonymousFreeBets .TextBox:disabled:-webkit-autofill {
+   background: #dadada !important;
+    color: #777;
+}
+.AnonymousFreeBets .TextBox {
+    width: 150px;
+    height: 18px;
+    line-height: 18px;
+    box-shadow: none;
+    margin: 0;
+    border-color: #b7b7b7;
+}
+.AnonymousFreeBets .btnFreeBets {
+    position: absolute;
+    right: 6px;
+    bottom: 6px;
+    display: block;
+    height: 19px;
+    width: 25px;
+    border: 0;
+    background-image: url("../img/SendFastSport.png");
+    background-repeat: no-repeat;
+}
+.AnonymousFreeBets .btnResetFreeBets {
+   position: absolute;
+    right: 6px;
+    bottom: 6px;
+    display: block;
+    height: 18px;
+    width: 25px;
+    border: 0;
+    background-image: url(../img/btn_cancella_rosso.gif);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size:18px;
+}
+.divDisclaimerFreeBet{
+    padding:5px;
+    margin:5px 6px 0 6px;
+    background-color:#f3e6b9;
+    color:#22314e;
+    border-radius:3px;
+    text-align: center;
+}

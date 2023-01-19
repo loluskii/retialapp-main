@@ -1,0 +1,1171 @@
+$skin : "atlantiq1";
+$cdnPath : "//#{$skin}.brlgcs.com/#{$skin}";
+$imagesPath : "//web.betteck.com/img";
+// $imagesPath : "//westernbet.brlgcs.com/atlantiq1/images";
+
+$site-width: 1124px;
+$switch-point: 1260px;
+$mo-point: 1134px;
+
+
+// $primary: #121827;
+$primary: #ffffff;
+// $secondary: #343944;
+$secondary: #373a42;
+$accent: #7d7d7d;
+$accent-alt: #FD9E03;
+
+$pure-white: #fff;
+// $alt-white: #F5F5F5;
+$alt-white: #D8DDE3;
+$pure-black: #000;
+$black: #000;
+
+$white: #fff;
+$p-hov: rgba(255, 255, 255, 0.1);
+
+$textcolor-dr : #000;
+$textcolor-li : #fff;
+
+// $green: #3abd23;
+$green: #64b000;
+$red: #cd2f28;
+$blue: #4c54f0;
+$darkblue: #014fa2;
+$yellow: #fec900;
+
+$col-fixture: #494d59;
+$alt-fixture: #5d6069;
+$col-1: #d7d7d7;
+$col-2: #686b6f;
+$col-3: #6b6e78;
+$col-4: #343844;
+$col-5: #c1c0c0;
+$col-6: #cd2f28;
+$col-7: #252525;
+$col-8: #2b2e36;
+$col-9: #E89B02;
+$col-10: #3abd23;
+$col-11: #3F434E;
+$col-12: #dfe1e3;
+$col-13: #0073b9;
+
+$sb-2: #343843;
+
+
+$si-1: #FFF7D2;
+$si-2: #1ba5d2;
+$si-3: #2b2b2b;
+$si-4: #c2c1c1;
+$si-5: #ededed;
+$si-6: #00aeef;
+$si-7: #ec008c;
+$si-8: #00a651;
+
+// ---odds styles
+@mixin odd-box(){
+  color: $pure-white;
+  background-color: $accent;
+}
+@mixin odd-box-hover(){
+  font-weight: bold;
+  background-color: darken($accent, 10%);
+}
+@mixin odd-box-selected(){
+  font-weight: bold;
+  color: $textcolor-li;
+  background-color: $accent-alt;
+  background-image: linear-gradient(to bottom, lighten($accent-alt, 15%) 0, darken($accent-alt, 0%) 100%);
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.16);
+}
+@mixin odd-box-selected-hover(){
+  background-color: darken($accent-alt, 5%);
+  background-image: linear-gradient(to bottom, lighten($accent-alt, 0%) 0, darken($accent-alt, 0%) 100%);
+}
+
+.row:after, .row:before {
+  content: " ";
+  display: table;
+}
+.row:after {
+  clear: both;
+}
+.groupsDivMain{
+  background-color: #fff;
+}
+.logged-table {
+  border: 1px solid #c2c1c1 !important;
+  width: 100%;
+}
+.logged-table.cashdesk-table tbody tr {
+  border-bottom: 1px solid #c2c1c1 !important;
+}
+.logged-table.cashdesk-table tbody tr td {
+  border-right: 1px solid #c2c1c1 !important;
+  line-height: 30px;
+  text-align: left;
+  padding: 0 5px;
+  color: #062164;
+  font-size: 12px;
+  font-weight: normal;
+  height: 31px;
+}
+.logged-table.cashdesk-table tbody tr td:nth-child(1) {
+  width: 70px;
+}
+.logged-table.cashdesk-table tbody tr td:nth-child(2) {
+  width: 70px;
+}
+.logged-table.cashdesk-table tbody tr td:nth-child(2) input {
+  width: 100%;
+}
+.logged-table.cashdesk-table tbody tr td:nth-child(3) {
+  width: 110px;
+  text-align: center;
+}
+.logged-table.cashdesk-table tbody tr td:nth-child(4) {
+  font-weight: bold;
+  width: 300px;
+  line-height: normal;
+}
+.logged-table.cashdesk-table tbody tr td:nth-child(4) span{
+  display: block;
+  width: 200px;
+  white-space: nowrap;
+  overflow: auto;
+  text-overflow: ellipsis;
+}
+.logged-table.cashdesk-table tbody tr td:nth-child(4) span:nth-child(2){
+  font-size: 11px;
+}
+.logged-table.cashdesk-table tbody tr td:nth-child(5) {
+  width: 130px;
+}
+.logged-table.cashdesk-table tbody tr td:nth-child(5) input[type="text"] {
+  width: calc(100% - 35px);
+  float: left;
+}
+.logged-table.cashdesk-table tbody tr td:nth-child(5) i {
+  float: left;
+  line-height: 24px;
+  font-size: 14px;
+  padding-left: 10px;
+  cursor: pointer;
+}
+.logged-table.cashdesk-table tbody tr td .add-remove-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  float: left;
+  cursor: pointer;
+  margin-top: 5px;
+  margin-right: 10px;
+  background-image: url(//7more.7more.bet/7more/images/remove-row.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.logged-table.cashdesk-table tbody tr td .add-remove-icon .add {
+  background-image: url(//7more.7more.bet/7more/images/add-row.png);
+  margin-bottom: 5px;
+}
+.logged-table.cashdesk-table tbody tr td:nth-child(6) {
+  font-weight: bold;
+  text-align: center;
+  width: 90px;
+}  
+.logged-table.cashdesk-table tbody tr td input[type="text"] {
+  border: 1px solid #062164;
+  border-radius: 3px;
+  font-weight: bold;
+  color: #00113C;
+  font-size: 13px;
+  line-height: 20px;
+  text-align: center;
+}
+.logged-table.cashdesk-table tbody tr td .smart-bet {
+  // position: relative;
+  cursor: pointer;
+  // -webkit-user-select: none;
+  // -moz-user-select: none;
+  // -ms-user-select: none;
+  // user-select: none;
+}
+.logged-table.cashdesk-table tbody tr td .smart-bet .tooltip-info {
+  position: relative;
+  display: inline-block;
+  padding: 0 4px 0 1px;
+
+  cursor: pointer;
+}
+        
+.logged-table.cashdesk-table tfoot td{
+  padding: 0 5px;
+}
+.logged-table.cashdesk-table tfoot td:nth-child(1) {
+          width: 70px;
+}
+.logged-table.cashdesk-table tfoot td:nth-child(1) .add-remove-icon {
+  width: 20px;
+  height: 20px;
+  float: left;
+  cursor: pointer;
+  margin-top: 5px;
+  margin-right: 10px;
+  background-image: url(//7more.7more.bet/7more/images/add-row.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin-bottom: 5px;
+}
+.cashdesk-content {
+  width: 100%;
+  display: inline-block;
+  border-bottom: 5px solid #FEC82E !important;
+  background-color: #d4d4d4;
+}
+.cashdesk-content .cashdesk-tabs {
+  width: 100%;
+  border-bottom: 1px solid #c2c1c1;
+  padding: 20px 0 30px 5px;
+  background-color: #d4d4d4;
+  display: inline-block;
+}
+.cashdesk-content .cashdesk-tabs .row {
+  width: 100%;
+  max-width: 735px;
+  display: block;
+  margin: 0 auto;
+}
+.cashdesk-content .cashdesk-tabs .row .tab {
+  width: 135px;
+  color: #ebebeb;
+  background-color: #373a42;
+  font-size: 12px;
+  font-weight: 500;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px 10px;
+  float: left;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+.cashdesk-content .cashdesk-tabs .row .tab span {
+  float: right;
+}
+.cashdesk-content .cashdesk-tabs .row .tab.green {
+  color: #44b250;
+}
+.cashdesk-content .cashdesk-tabs .row .stake-holder {
+  float: left;
+  line-height: 32px;
+  text-align: right;
+  padding-left: 30px;
+  margin-bottom: 5px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: calc(100% - 430px);
+}
+.cashdesk-content .cashdesk-tabs .row .stake-holder span {
+  font-size: 13px;
+  padding-right: 5px;
+  color: #062164;
+  font-weight: 500;
+}
+.cashdesk-content .cashdesk-tabs .row .stake-holder input {
+  border: 1px solid #062164;
+  border-radius: 3px;
+  font-weight: bold;
+  color: #00113C;
+  font-size: 10px;
+  line-height: 30px;
+  width: 83px;
+  font-size: 13px;
+  padding: 0 5px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.cashdesk-content .cashdesk-tabs .row .buttons {
+  float: left;
+  text-align: right;
+  width: calc(100% - 430px);
+  margin-bottom: 5px;
+}
+.cashdesk-content .cashdesk-tabs .row .buttons div {
+  display: inline-block;
+  padding-left: 27px;
+  padding-right: 8px;
+  border-radius: 3px;
+  cursor: pointer;
+  background-image: url(//7more.7more.bet/7more/images/cancel-button.png);
+  background-size: auto 60%;
+  background-position: left 5px top 7px;
+  background-repeat: no-repeat;
+  color: #ebebeb;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 32px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-right: 5px;
+}
+.cashdesk-content .cashdesk-tabs .row .buttons div.cancel {
+  background-color: #e1042e;
+}
+.cashdesk-content .cashdesk-tabs .row .buttons div.proceed {
+  margin-right: 0;
+  background-image: url(//7more.7more.bet/7more/images/proceed-button.png);
+  background-color: #2e9c3d;
+}
+
+.akdf-container{
+  width: 603px;
+  margin: 0 auto;
+}
+.oddsViewPanel>.empty:before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 50px;
+}
+.oddsViewPanel>.empty span {
+  display: block;
+  position: relative;
+  width: 420px;
+  padding: 10px 10px 10px 70px;
+  line-height: 14px;
+  margin: 40px auto;
+  color: #42464c;
+  border: 1px solid #fff;
+  min-height: 54px;
+  background-image: url(./Static/img/msg_cnt_bg.png);
+  background-repeat: repeat-x;
+  background-position: left bottom;
+  box-shadow: 0 0 0 1px #d9d9d9;
+}
+.oddsViewPanel>.empty span:before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 58px;
+  height: 62px;
+  background-image: url(./Static/img/msg_info.png);
+  background-repeat: no-repeat;
+
+}
+.divOdds {
+  margin-bottom: 10px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  clear: both;
+  background-color: #2a2e37;
+  .title {
+    border-radius: 3px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    position: relative;
+    height: 29px;
+    line-height: 29px;
+    padding-left: 30px;
+    font-size: 12px;
+    background-color: #3f444e;
+    .ico {
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      height: 20px;
+      width: 25px;
+      background-size: 16px;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+    > SPAN {
+      color: #fff;
+      font-weight: bold;
+      >span:nth-child(2):before {
+        content: " - ";
+      }
+    }
+    .btns {
+      position: absolute;
+      top: 6px;
+      right: 4px;
+      padding: 0 2px;
+    }
+  }
+  .CGQ {
+    position: relative;
+    background-color: darken($primary, 10%);
+    color: #2a2d34;
+    list-style-type: none;
+    margin: 0;
+    padding: 21px 0 0 0;
+    overflow: hidden;
+    > li {
+      cursor: pointer;
+      > ul {
+        background-color: #f4f5f6;
+      }
+      > span {
+        position: absolute;
+        top: 0;
+        display: block;
+        width: 66px;
+        padding: 0 2px;
+        margin-left: 2px;
+        height: 21px;
+        line-height: 22px;
+        font-size: 11px;
+        text-align: center;
+        background-color: #d6d9da;
+        border-radius: 3px 3px 0 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+  .CQ {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    width: 100%;
+    float: left;
+    > LI {
+      color: #3f444e;
+      font-weight: bold;
+      position: relative;
+      background-color: #d6d9da;
+      text-align: center;
+      width: 116px;
+      font-size: 11px;
+      float: left;
+      margin: 2px 1px 0 1px;
+      height: 32px;
+      line-height: 32px;
+      cursor: pointer;
+      border: 1px solid #bfbfbf;
+      &.sel, &:hover {
+        background-color: $accent;
+        border: 1px solid $col-9;
+        color: #fff;
+        cursor: pointer;
+      }
+    }
+  }
+  .oddClass {
+    position: relative;
+    background-color: #f5f5f5;
+    font-size: 11px;
+    min-height: 18px;
+    padding: 5px 25px 0 5px;
+    >div {
+      display: none;
+      span {
+        color: #666c75;
+        &:first-child {
+          color: $primary;
+          font-weight: 700;
+          padding-right: 5px;
+        }
+      }
+    }
+    &.show {
+      > div {
+        display: block;
+      }
+      .btnDisplay {
+        font-size: 0;
+        color: #fff;
+        background-image: url(./Static/img/Subevent_open.png);
+      }
+    }
+    .btnDisplay {
+      display: block;
+      position: absolute;
+      right: 5px;
+      top: 3px;
+      height: 15px;
+      width: auto;
+      text-align: right;
+      padding-right: 22px;
+      line-height: 17px;
+      color: #5a5f67;
+      background-image: url(./Static/img/Subevent_close.png);
+      background-position: top right;
+      background-repeat: no-repeat;
+      cursor: pointer;
+    }
+  }
+}
+
+.divOdds .SEs {
+  background-image: url(./Static/img/bg_quote_top.png);
+  background-repeat: repeat-x;
+  clear: both;
+  padding-top: 24px;
+  background-color: #fff;
+  //overflow: hidden;
+}
+.divOdds .item {
+  float: left;
+  width: 100%;
+  position: relative;
+  min-height: 33px;
+  line-height: 28px;
+  border-bottom: 1px solid #dfe1e3;
+  border-top: 6px solid #fff;
+  margin-bottom: 0;
+  padding-bottom: 3px;
+  background: #fff;
+}
+.oddsViewPanel .divOdds {
+  margin: 0;
+}
+.oddsViewPanel .divOdds .item.firstItemGroup, .oddsViewPanel .divOdds .item:first-child {
+  border-top: 0;
+}
+.oddsViewPanel .divOdds .item.firstDate {
+  border-top: 0;
+}
+.divOdds .sepData {
+  clear: both;
+  height: 27px;
+  line-height: 20px;
+  font-size: 12px;
+  color: #42464C;
+  background-color: #F2F3F4;
+  margin-bottom: 0;
+  padding-left: 10px;
+  border-bottom: 1px solid #F2F3F4;
+}
+.oddsViewPanel .divOdds .item .allibraggio,
+.oddsViewPanel .divOdds .item .oddsClassCount,
+.oddsViewPanel .divOdds .item .oddsCount,
+.oddsViewPanel .divOdds .item .sepData {
+  display: none;
+}
+.oddsViewPanel .divOdds.r1 .item.firstDate .sepData,
+.oddsViewPanel .divOdds.r1 .item:first-child .sepData {
+  display: block;
+  border-bottom: 6px solid #fff;
+}
+.oddsViewPanel .divOdds .item:first-child .sepData {
+  display: block;
+  border-bottom: 6px solid #fff;
+}
+.oddsViewPanel .divOdds .item .ID {
+  position: absolute;
+  left: 5px;
+  bottom: 6px;
+  line-height: 14px;
+  font-size: 10px;
+  color: #42464c;
+}
+.oddsViewPanel .divOdds .item .Time {
+  position: absolute;
+  left: 32px;
+  bottom: 6px;
+  line-height: 14px;
+  font-size: 10px;
+  color: #666;
+}
+.oddsViewPanel .divOdds.loading {
+  background-color: #fff;
+}
+.divOdds .item .Time span {
+  padding-right: 5px;
+}
+.divOdds .item .Event {
+  float: left;
+  padding-left: 5px;
+  position: relative;
+  z-index: 2;
+  width: 200px;
+  padding-bottom: 20px;
+  line-height: 12px;
+  font-weight: bold;
+  color: #42464c;
+  font-size: 12px;
+
+  span {
+    display: flex;
+    img {
+      width: 15px;
+      height: 15px;
+      margin: 0 4px;
+    }
+  }
+}
+.divOdds .item .Event:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.divOdds.c6 .item .Event {
+  width: 290px;
+}
+.divOdds.c8 .item .Event {
+  width: 193px;
+}
+.divOdds.c9 .item .Event {
+  width: 154px;
+}
+.oddsViewPanel .divOdds .item .stats {
+  position: absolute;
+  bottom: 7px;
+  z-index: 3;
+  height: 14px;
+  width: 14px;
+  left: 114px;
+  z-index: 11;
+  background-image: url(./Static/img/quote_stats.png);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.oddsViewPanel .divOdds .item .addedFunction {
+  position: absolute;
+  bottom: 7px;
+  left: 100px;
+  z-index: 10;
+  height: 14px;
+}
+.oddsViewPanel .divOdds .item .addedFunction>div {
+  position: absolute;
+  left: 0;
+  display: block;
+  width: 14px;
+  height: 14px;
+  font-size: 0;
+  color: #fff;
+  overflow: hidden;
+  background-position: center center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+.oddsViewPanel .divOdds .item .addedFunction>div.headToHead {
+  left: 15px;
+  background-image: url(./Static/img/h2hIcon.png);
+}
+.oddsViewPanel .divOdds .item .addedFunction>div.tableLeague {
+  background-image: url(./Static/img/classificaIcon.png);
+}
+.divOdds .item .odds {
+  float: right;
+  cursor: pointer;
+}
+.divOdds .item .odds .cq {
+  float: left;
+  position: relative;
+  margin-right: 3px;
+}
+
+.oddsViewPanel .divOdds .item .odds .cq>span {
+  display: none!important;
+}
+.oddsViewPanel .divOdds .item.firstItemGroup .cq>span,
+.oddsViewPanel .divOdds .item:first-child .cq>span {
+  display: block!important;
+  position: absolute;
+  top: -49px;
+  width: 100%;
+  height: 20px;
+  line-height: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #42464c;
+  text-align: center;
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.divOdds .item:nth-child(2) .odds .cq > span {
+  display: block;
+  font-size: 11px;
+  font-weight: bold;
+  position: absolute;
+  top: -50px;
+  width: 100%;
+  height: 20px;
+  line-height: 20px;
+  color: #42464C;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.divOdds .item .odds .odd,
+.divOdds .item .odds .odd.empty:hover {
+  font-weight: bold;
+  font-size: 12px;
+  margin-bottom: 3px;
+  float: left;
+  width: 47px;
+  margin-right: -1px;
+  position: relative;
+  text-align: center;
+  border: 1px solid $col-1;
+  //border-bottom: 1px solid $darkblue;
+  color: $pure-white;
+  background-color: $accent;
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2e934c', endColorstr='#1f7d3b',GradientType=0 );
+}
+.divOdds .item .odds .odd.sel,
+.divOdds .item .odds .odd.QuotaSel {
+  color: #fff !important;
+  @include odd-box-selected-hover();
+  :hover {
+    @include odd-box-selected-hover();
+  }
+}
+.divOdds .item .odds .odd:hover {
+  @include odd-box-hover();
+}
+
+.divOdds .item .odds .odd.empty:hover {
+  cursor: default;
+}
+.oddsViewPanel .divOdds .item .odds .odd.empty:after {
+  content: '-';
+  color: #fff!important;
+}
+.OddGB_1_0 a, .OddGB_1_1 a,
+.divOdds .SEs .item .odd.g1, .SEOdd.g1 a {
+  color: #fff;
+}
+.divOdds.r1 .item .odds .odd {
+  height: 28px;
+}
+
+.divOdds .item .odd DIV:first-child {
+  color: #b0e0ae;
+  height: 15px;
+  line-height: 18px;
+  font-size: 11px;
+  overflow: hidden;
+  font-weight: normal;
+  text-overflow: ellipsis;
+}
+.divOdds.r1 .item .odds .odd DIV:first-child {
+  display: none;
+  font-weight: normal;
+}
+.oddsViewPanel .divOdds.r1 .item.firstDate .odds .cq .odd .oddsType,
+.oddsViewPanel .divOdds.r1 .item:first-child .odds .cq .odd .oddsType {
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: block;
+  top: -27px;
+  line-height: 10px;
+  width: 47px;
+  height: 20px;
+  text-align: center;
+  color: #404040;
+}
+.divOdds .item:nth-child(2) .odd DIV:first-child,
+.divOdds .sepData+.item .odds .odd DIV:first-child {
+  display: block;
+  background-color: #F2F3F4;
+  color: #42464C;
+  height: 20px;
+  left: 0;
+  line-height: 10px;
+  position: absolute;
+  top: -27px;
+  width: 100%;
+  font-size: 11px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.oddsViewPanel .divOdds .item:nth-child(2) .odd DIV:first-child {
+  display: none;
+}
+.oddsViewPanel .divOdds .item .odds .odd.firstInRow {
+  clear: left;
+}
+.divOdds .item .odds .hnd {
+  position: absolute;
+  width: 30px;
+  left: -35px;
+  top: 0;
+  display: none;
+  cursor: default;
+  font-weight: normal;
+  color: #646464;
+  font-size: 11px;
+  text-align: right;
+}
+.oddsViewPanel .divOdds .item .betaradarContent {
+  clear: left;
+}
+.oddsViewPanel .divOdds .item .betaradarContent>div.brClosed {
+  display: none;
+}
+.oddsViewPanel .divOdds .item .betaradarContent>div .widgetBody {
+  clear: both;
+  min-height: 100px;
+  //margin: 20px 0;
+}
+
+.oddsViewPanel .divOdds .item .betaradarContent>div .headWidget {
+  position: relative;
+  color: #fff;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-color: #2da050;
+}
+.oddsViewPanel .divOdds .item .betaradarContent>div .headWidget .btnClose {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 30px;
+  font-size: 0;
+  color: #2da050;
+  background-image: url(./Static/img/btn_close_odds.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.lnkOddsCls {
+  background-image: url(#{$imagesPath}/btn_close_odds.png);
+  width: 14px;
+  height: 14px;
+  display: block;
+  float: right;
+  background-repeat: no-repeat;
+}
+
+.lnkOddsPrn {
+  background-image: url(#{$imagesPath}/btn_print.png);
+  width: 14px;
+  height: 14px;
+  display: block;
+  float: right;
+  margin-right: 10px;
+  background-repeat: no-repeat;
+}
+
+
+.lnkOddsRfh {
+  background-image: url(#{$imagesPath}/btn_refresh.png);
+  width: 14px;
+  height: 15px;
+  display: block;
+  float: right;
+  margin-right: 10px;
+  background-repeat: no-repeat;
+}
+
+.lnkOddsBack {
+  background-image: url(#{$imagesPath}/btn_back.png);
+  width: 13px;
+  height: 10px;
+  display: block;
+  float: right;
+  margin-right: 10px;
+  margin-top: 3px;
+  background-repeat: no-repeat;
+}
+
+.OddsBreadbrum {
+  height: 28px;
+  line-height: 28px;
+  background-color: #2a2d34;
+  position: relative;
+}
+
+.OddsBreadbrum > ul {
+  margin: 0;
+  padding: 0;
+  color: #FFF;
+  list-style-type: none;
+  padding-left: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  height: 28px;
+  line-height: 28px;
+  width: 590px;
+}
+
+.OddsBreadbrum > ul > li {
+  display: inline;
+}
+
+.OddsBreadbrum > ul > li > a {
+  color: $accent;
+  display: inline;
+  font-size: 11px;
+  padding-right: 14px;
+  padding-left: 10px;
+  text-decoration: none;
+  background-image: url(#{$imagesPath}/more-than.png);
+  background-position: right center;
+  background-repeat: no-repeat;
+}
+
+.OddsBreadbrum > ul > li:last-child > a:last-child {
+  color: #fff;
+  background-image: none;
+}
+
+.subeventWidgets .starters {
+  position: absolute;
+  right: 0;
+  top: 43px;
+  >div {
+    display: inline-block;
+    height: 22px;
+    width: 44px;
+    padding: 0;
+    margin-right: 4px;
+    background-color: #fff;
+    border-radius: 3px;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    &.HeadToHead {
+      background-image: url(./Static/img/h2hIcon.png);
+    }
+  }
+}
+#divDett {
+  position: relative;
+  #SEOddsDataSE {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    height: 40px;
+    line-height: 45px;
+    color: #fff;
+    font-size: 13px;
+    display: block!important;
+  }
+  .OddsDetailsSE {
+    height: 40px;
+    line-height: 40px;
+    background-color: #3f444e;
+    padding-left: 10px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    font-size: 12px;
+    color: #fff;
+    font-weight: 700;
+    display: block!important;
+  }
+  .SEItem {
+    margin-bottom: 5px;
+    border: 1px solid #d3d9db;
+    position: relative;
+    &.closed {
+      height: 26px;
+      overflow: hidden;
+      .SECQ:before {
+        background-image: url(./Static/img/ev_arrow_close.png);
+      }
+    }
+  }
+  .SECQ {
+    position: relative;
+    height: 26px;
+    line-height: 26px;
+    background-repeat: no-repeat;
+    background-position: right 0;
+    color: #000;
+    font-weight: 700;
+    font-size: 11px;
+    padding: 0 2px 0 25px;
+    cursor: pointer;
+    border-bottom: 1px solid #d3d9db;
+    background: #f9f9f9;
+    background: linear-gradient(180deg,#f9f9f9 12%,#eee);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f9f9f9",endColorstr="#eeeeee",GradientType=0);
+    clear: both;
+    &:before {
+      content: "";
+      position: absolute;
+      left: 7px;
+      top: 7px;
+      height: 10px;
+      width: 10px;
+      background-image: url(./Static/img/ev_arrow_open.png);
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+  .DescPuls {
+    height: 15px;
+    width: 15px;
+    font-size: 0;
+    background-image: url(./Static/img/Subevent_close.png);
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    cursor: pointer;
+    &.sel {
+      background-image: url(./Static/img/Subevent_open.png);
+    }
+  }
+  .DescInfo {
+    padding: 10px;
+    font-size: 11px;
+    color: #65696c;
+    line-height: 15px;
+    display: none;
+    &.sel {
+      display: block;
+    }
+  }
+  .SEOdds {
+    font-size: 0;
+    .SEOdd {
+      height: 26px;
+      border-top: 1px solid #d3d9db;
+      line-height: 26px;
+      position: relative;
+      padding: 0;
+      margin: 0;
+      border-spacing: 0;
+      border-collapse: collapse;
+      display: inline-block;
+      font-size: 12px;
+      .SEOddsTQ {
+        display: inline;
+        padding-left: 3px;
+        font-size: 9px;
+        color: #65696c;
+      }
+      .SEOddLnk {
+        display: block;
+        position: absolute;
+        right: 0;
+        color: #fff;
+        top: 0;
+        width: 48px;
+        height: 26px;
+        font-size: .975em;
+        line-height: 26px;
+        text-align: center;
+        text-decoration: none;
+        font-weight: bold;
+        background: $accent;
+        cursor: pointer;
+      }
+      &.sel {
+        .SEOddLnk {
+          background: $accent-alt;
+          color: $white;
+        }
+      }
+      &.disabled {
+        .SEOddLnk {
+          opacity: 0.8;
+          cursor: not-allowed;
+        }
+      }
+    }
+    &.c3 {
+      .SEOdd {
+        width: 33.33333%;
+      }
+    }
+    &.c2 {
+      .SEOdd {
+        width: 50%;
+      }
+    }
+    &.c4 {
+      .SEOdd {
+        width: 25%;
+      }
+    }
+    &.c5 {
+      .SEOdd {
+        width: 20%;
+      }
+    }
+    &.c6 {
+      .SEOdd {
+        width: 16.666666%;
+      }
+    }
+    &.c9 {
+      .SEOdd {
+        width: 11.111111%;
+      }
+    }
+  }
+}
+
+
+ul, ul li {
+  list-style: none;
+}
+
+.divOdds .CGQ > li.preSel > span,
+.divOdds .CGQ > li.sel.preSel > span {
+  color: #fff;
+  background-color: $accent;
+}
+
+.divOdds .CGQ > li.sel.preSel > ul {
+  display: block;
+  border-top: 2px solid $accent;
+}
+
+.divOdds .CGQ > li.itm1 > span {
+  left: 11px;
+}
+
+.divOdds .CGQ > li.itm2 > span {
+  left: 83px;
+}
+
+.divOdds .CGQ > li.itm3 > span {
+  left: 155px;
+}
+
+.divOdds .CGQ > li.itm4 > span {
+  left: 227px;
+}
+
+.divOdds .CGQ > li.itm5 > span {
+  left: 299px;
+}
+
+.divOdds .CGQ > li.itm6 > span {
+  left: 371px;
+}
+
+.divOdds .CGQ > li.itm7 > span {
+  left: 443px;
+}
+
+.divOdds .CGQ > li.itm8 > span {
+  left: 515px;
+}
+
+.divOdds .CGQ > li.itm9 > span {
+  left: 11px;
+  top: 23px;
+}
+
+.divOdds .CGQ > li.itm10 > span {
+  left: 83px;
+  top: 23px;
+}
+.divOdds .CGQ.t9, .divOdds .CGQ.t10, .divOdds .CGQ.t11, .divOdds .CGQ.t12, .divOdds .CGQ.t13, .divOdds .CGQ.t14, .divOdds .CGQ.t15, .divOdds .CGQ.t16 {
+  padding-top: 44px;
+}
